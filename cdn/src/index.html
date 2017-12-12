@@ -1,0 +1,20 @@
+---
+title: Wispi
+date: 2017-11-06
+layout: layout.html
+scripts:
+- js/wispi.js
+---
+
+<div id="people" data-template="peopleTemplate">
+  <script id="peopleTemplate" type="text/x-jsrender">
+  {^{for people}}
+  <div>
+    <em>Name:</em> {^{:name}}
+    {^{if showNickname && nickname}}
+      (Goes by <em>{^{:nickname}}</em>)
+    {{/if}}
+  </div>
+  {{/for}}
+  </script>
+</div>

@@ -1,0 +1,14 @@
+{
+  "source": "./src",
+  "destination": "./target",
+  "metadata": {
+    "title": "Sample CDN site",
+    "description": "Example CDN proxy for serverless instruction"
+  },
+  "plugins": {
+    "metalsmith-layouts": {
+      "engine": "handlebars",
+      "directory": "./layout"
+    }
+  }
+}

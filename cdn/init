@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+npm install -g n
+npm cache clean -f
+sudo n latest
+sudo n prune
+npm update -g npm
+
+docker --version
+echo Node version $(node --version)
+echo Npm version $(npm --version)

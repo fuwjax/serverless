@@ -1,0 +1,21 @@
+{
+  "name": "sample-cdn",
+  "version": "1.0.0",
+  "description": "Sample CDN for serverless instruction",
+  "private": true,
+  "author": "Michael Doberenz",
+  "license": "ISC",
+  "scripts": {
+    "prepare": "metalsmith && docker build -t sample-cdn .",
+    "start": "docker run --name cdn -d --rm -p 8080:80 sample-cdn",
+    "stop": "docker stop cdn || true"
+  },
+  "devDependencies": {
+    "handlebars": "^4.0.11",
+    "metalsmith": "^2.3.0",
+    "metalsmith-layouts": "^1.8.1"
+  },
+  "dependencies": {
+    "restart": "0.0.4"
+  }
+}
